@@ -12,7 +12,8 @@
     <div>
         <x-input title="Password" type="password" nombre="password">
             @error('password')
-                <p>
+                <p>{{$message}} </p>
+                @enderror
     </div>
 
 
