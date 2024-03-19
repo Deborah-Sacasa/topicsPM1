@@ -1,26 +1,39 @@
 <div>
-    <!-- Do what you can, with what you have, where you are. - Theodore Roosevelt -->
+   <h1 class="font-serif">Register</h1>
 
     <form action="/register" method= "post">
         @csrf
         <h1>Register</h1>
         <div>
-            <label for= "">Name </label>
-            <input type="text" name="name">
+            <label for= ""class=font-serif>Name </label>
+            <input type="text" nombre="nombre">
+            @error('nombre')
+            @enderror
+                <p> {{$message}} </p>
         </div>
+
     <div>
-        <label for= "">Email </label>
-        <input type="text" name="email">
+        <label for= "" class=font-serif>Email </label>
+        <input type="text" nombre="email">
+        @error('email')
+            <p> {{$message}} </p>
+            @enderror
     </div>
 
     <div>
         <label for= "">Password </label>
-        <input type="password" name= "password">
+        <input type="password" nombre= "password">
+        @error('password')
+            <p> {{$message}} </p>
+            @enderror
     </div>
 
     <div>
         <label for= "">Birthday </label>
-        <input type="date" name= birthday>
+        <input type="date" nombre= birthday>
+        @error('birthday')
+            <p> {{$message}} </p>
+            @enderror
     </div>
     <button type="submit">Send</button>
 
